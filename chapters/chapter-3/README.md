@@ -27,6 +27,8 @@ npm serve
 ```
 This launched another web app on local port 8081. Open a browser and navigate to http://localhost:8081. The "Welcome to Your Vue.js App" page will display.
 
+This is a good time to take a short detour to go over [a Vue tutorial](https://www.taniarascia.com/getting-started-with-vue/) to get familiar with the Vue framework.
+
 ## Combine the API and the vue projects together
 To make things simpler, we will embed the Vue project in the Go project, and serve requests to both parts from the same port (8090).
 

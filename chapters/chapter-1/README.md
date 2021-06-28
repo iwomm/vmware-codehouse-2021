@@ -1,4 +1,4 @@
-# VMware CodeHouse 2021 Prework- Chapter 1
+# VMware CodeHouse 2021 Prework - Chapter 1
 ## Objective
 In this chapter, we will:
 - Initialize the project and the Go module
