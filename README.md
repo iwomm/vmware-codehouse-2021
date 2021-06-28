@@ -4,11 +4,20 @@ This project will serve as guidance for attendees and mentors of VMware CodeHous
 
 The goal of VMware CodeHouse 2021 will be to create an application that furthers STEM eduction and/or Diversity & Inclusion.
 
-This project contains several chapters with hands-on coding exercises. Each chapter adds new code to the last one. A chapter is broken down into a few small steps, with each step introduces a bite-size new concept or one tool. The expected code result for each chapter is provided in the `codehouse-2021-prework` sub-folder inside the chapter's folder. The finished product off the last chapter is a TODO web application written in Go, Gin and Vue. There are to main components:
+This project contains several chapters with hands-on coding exercises. Each chapter adds new code to the last one. A chapter is broken down into a few small steps, with each step introduces a bite-size new concept or one tool. The expected code result for each chapter is provided in the `codehouse-2021-prework` sub-folder inside the chapter's folder. The finished product off the last chapter is a TODO web application written in Go, Gin and Vue. 
+
+Table of content for the hands-on exercises:
+- Chapter 1 - Set up development tools, create the "Hello Go & Gin" app
+- Chapter 2 - Create the Rest API in Go & Gin
+- Chapter 3 - Scaffold the "Hello Vue" app
+- Chapter 4 - Connect the Vue App to the API
+- Chapter 5 - Polishing and clean up
+
+There are to main components in the finished app:
 - **Server side** -  a Rest API written in Go (the base language) and Gin (a web framework for Go).
 - **Client side** -  a Javascript application running in the browser that interacts with the API. Vue is the client-side Javascript framework.
 
-Given the step-by-step nature of the chapters, you can jump right into chapter one and start learning by coding. If you find some of the concepts demanding more introduction, use the recommended readings below to get an overview of a subject and come back to coding. The recommended readings were selected for their brevity and clarity in order to save learning time.     
+Given the step-by-step nature of the chapters, you can jump right into chapter one and start learning by coding. If you find some concepts demanding more introduction, use the recommended readings below to get an overview of a subject and come back to coding. The recommended readings were selected for their brevity and clarity in order to save learning time.     
 
 ## Recommended reading
 
