@@ -4,17 +4,17 @@ This project will serve as guidance for attendees and mentors of VMware CodeHous
 
 The goal of VMware CodeHouse 2021 will be to create an application that furthers STEM eduction and/or Diversity & Inclusion.
 
-This project contains several small chapters, with each chapter adds bit-sized concepts to the last one. The end product is a TODO web application written in Go, Gin and Vue. The end product has two main parts:
+This project contains several chapters with hands-on coding exercises. Each chapter adds new code to the last one. A chapter is broken down into a few small steps, with each step introduces a bite-size new concept or one tool. The finished product is a TODO web application written in Go, Gin and Vue. There are to main components:
 - **Server side** -  a Rest API written in Go (the base language) and Gin (a web framework for Go).
 - **Client side** -  a Javascript application running in the browser that interacts with the API. Vue is the client-side Javascript framework.
-    
 
-## Required reading
+Given the step-by-step nature of the chapters, you can jump right into chapter one and start learning by coding. If you find some of the concepts requirs more introduction, use the recommended readings below to get an overview of a subject and come back to coding. The recommended readings were selected for their brevity and clarity in order to save learning time.     
+
+## Recommended reading
 
 To make sure you are comfortable with the concepts and tools we will be using, please read through the following documents well in advance:
 
 - Introduction to **Go**. [Learning Go](https://www.miek.nl/go/) is one online free book featuring numerous execises. There are [many resources for learning Go](https://github.com/dariubs/GoBooks).
-- Intr    
 - Intruduction to **Rest API**. [This page ](https://www.sitepoint.com/rest-api/)covers many aspects of Rest API with simple exercises.
 - Introduction to **Gin**. [This tutorial ](https://blog.logrocket.com/how-to-build-a-rest-api-with-golang-using-gin-and-gorm/)builds a simple CRUD API using Gin. It uses Sqlite for database. 
 - Introduction to **Vue**. [A turtorial for Vue like this one](https://www.taniarascia.com/getting-started-with-vue/) provides a good overview of the concepts and will make you feel more comfortable working with Vue.
