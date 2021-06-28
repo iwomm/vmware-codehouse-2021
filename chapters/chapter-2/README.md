@@ -1,5 +1,5 @@
-# VMware CodeHouse 2021 - Chapter 2
-
+# VMware CodeHouse 2021 Prework - Chapter 2
+## Objective
 To continue with the project created in chapter 1, we will create API for managing TODO items. The API will have endpoints for 
 - GET /api/todos - get the list of all todo items
 - POST /api/todos - add a new todo item
