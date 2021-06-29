@@ -1,32 +1,40 @@
 <template>
   <div id="app">
     <h1>To-Do List</h1>
-    <ul>
-      <li v-for="item in todolist" v-bind:key="item">{{item}}</li>
-    </ul>
+    <table>
+      <tbody>
+        <tr v-for="todo in todos" :key="todo.id">
+          <td>{{ todo.value }}</td>
+          <td>{{ todo.due_date }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+
 const appData = {
-  todolist: ["More to do"]
+  todos: []
 }
+
 export default {
   name: 'App',
   data() {
     return appData;
   },
   mounted: function() {
-    this.getList();
+    this.getTodos();
   },
   methods: {
-    getList: getList
+    getTodos: getTodos
   }
 }
-function getList() {
-  axios.get("/api/lists").then( res => {
-    appData.todolist = res.data.list
+
+function getTodos() {
+  axios.get("/api/todos").then( res => {
+    appData.todos = res.data.list
   });
 }
 </script>
@@ -34,10 +42,6 @@ function getList() {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 </style>

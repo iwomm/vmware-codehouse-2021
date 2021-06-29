@@ -11,7 +11,7 @@ Table of content for the hands-on exercises:
 - Chapter 2 - Create the Rest API in Go & Gin
 - Chapter 3 - Scaffold the "Hello Vue" app
 - Chapter 4 - Connect the Vue App to the API
-- Chapter 5 - Polishing and clean up
+- Chapter 5 - Polish and clean up
 
 There are to main components in the finished app:
 - **Server side** -  a Rest API written in Go (the base language) and Gin (a web framework for Go).
