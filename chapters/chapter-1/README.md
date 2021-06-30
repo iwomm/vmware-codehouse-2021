@@ -2,7 +2,7 @@
 ## Objective
 In this chapter, we will:
 - Initialize the project and the Go module
-- Create the "Hello Go & Gin" API
+- Create the "Hello Go & Gin" Go app
 - Learn how to debug Go using VS Code
 
 
