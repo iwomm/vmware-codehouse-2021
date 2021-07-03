@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <todo-form @add:todo="addTodo" />
     <todo-list :todos="todos" />
   </div>
 </template>
 
 <script>
+import TodoForm from '@/components/TodoForm.vue'
 import TodoList from '@/components/TodoList.vue'
 
 const appData = {
@@ -14,6 +16,7 @@ const appData = {
 export default {
   name: 'app',
   components: {
+    TodoForm,
     TodoList
   },
   data() {
@@ -23,7 +26,8 @@ export default {
     this.getTodos();
   },
   methods: {
-    getTodos: getTodos
+    getTodos: getTodos,
+    addTodo: addTodo
   }
 }
 
@@ -37,6 +41,22 @@ async function getTodos() {
       console.error(error)
     }
 }
+
+async function addTodo(todo) {
+  try {
+    const response = await fetch('/api/todos', {
+      method: 'POST',
+      body: JSON.stringify(todo),
+      headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+    console.log(response.status)
+    await getTodos()
+  } 
+  catch (error) {
+    console.error(error)
+  }
+}
+
 </script>
 
 <style>

@@ -1,4 +1,4 @@
-# VMware CodeHouse 2021 Prework - Chapter 1
+# Chapter 1 - Create the "Hello Go & Gin" app
 ## Objective
 In this chapter, we will:
 - Initialize the project and the Go module

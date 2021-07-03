@@ -4,14 +4,14 @@ This project will serve as guidance for attendees and mentors of VMware CodeHous
 
 The goal of VMware CodeHouse 2021 will be to create an application that furthers STEM eduction and/or Diversity & Inclusion.
 
-This project has several incremental chapters with hands-on coding exercises. A chapter contains a few small steps, with each step introduces a bite-size new concept or a tool. The expected code for each chapter is provided in the `codehouse-2021-prework` folder of the chapter. The finished product is a TODO web application written in Go, Gin and Vue. 
+This project contains several incremental chapters with hands-on coding exercises. A chapter contains a few small steps, with each step introduces a bite-size new concept or a tool. The expected code for each chapter is provided in the `codehouse-2021-prework` sub-folder of the chapter. The finished product is a TODO web application written in Go, Gin and Vue. 
 
-There are to main components in the finished app:
+There are two main components in the finished app:
 - **Server side** -  a Rest API written in Go (the base language) and Gin (a web framework for Go).
-- **Client side** -  a Javascript application running in the browser that interacts with the API. Vue is the client-side Javascript framework.
+- **Client side** -  a Javascript application running in the browser that interacts with the API. Vue is used in this project because it's relatively easier to understand for someone not familiar with any front-end frameworks. Students are encouraged to replace it with other frameworks they feel comfortable with, such as AngularJS or React. 
 
 Table of content:
-- Chapter 1 - Set up development tools, create the "Hello Go & Gin" app
+- Chapter 1 - Create the "Hello Go & Gin" app
 - Chapter 2 - Create the Todo API in Go & Gin
 - Chapter 3 - Scaffold the "Hello Vue" app
 - Chapter 4 - Display the todo list and make a Vue component

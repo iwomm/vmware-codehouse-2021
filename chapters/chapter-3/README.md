@@ -1,7 +1,10 @@
-# VMware CodeHouse 2021 Prework- Chapter 3
+# Chapter 3 - Scaffold the "Hello Vue" app
 
 ## Objective
 We will add UI to the Go project using the Vue.js framework. 
+- Scaffold a Vue app named todo-vue
+- Unify the Go and Vue apps
+- Debug the Vue app
 
 
 ## Required tools before start
@@ -11,7 +14,7 @@ We will add UI to the Go project using the Vue.js framework.
 	`npm install -g @vue/cli`
 
 
-## Scaffold the vue-todo project
+## Scaffold the "Hello Vue" app
 
 Run the following command in a terminal:
 ```
@@ -23,29 +26,26 @@ Select `Default ([Vue 2] babel, eslink)` from the command-line options using the
 The last command created a subfolder named `vue-todo` under your project folder. Next run these commands in the terminal:
 ```
 cd todo-vue
-npm serve
+npm run serve
 ```
-This launched another web app on local port 8081. Open a browser and navigate to http://localhost:8081. The "Welcome to Your Vue.js App" page will display.
+This launched another web app on local port 8081. Open a browser and navigate to http://localhost:8081. The "Welcome to Your Vue.js App" page will display. This is a good time to take a detour to go over [**a Vue tutorial**](https://www.taniarascia.com/getting-started-with-vue/) to get familiar with the Vue framework.
 
-This is a good time to take a short detour to go over [a Vue tutorial](https://www.taniarascia.com/getting-started-with-vue/) to get familiar with the Vue framework.
 
-## Combine the API and the vue projects together
-To make things simpler, we will embed the Vue project in the Go project, and serve requests to both parts from the same port (8090).
+## Unify the Go and Vue apps
+Note that the Vue app is running on port 8081 because we launched inside its own folder. Now we are going to embed the Vue project in the Go project, and serve requests to both parts from the same port (8090).
 
 In the previous terminal, first stop the Vue server launched from the last step (ctrl+C), then run the following commands:
 ```
-rm -rf dist
-npm run build
+rm -rf dist; npm run build
 ```
-This compiled the Vue project and saved the result in the `dist` folder, which contains the static contents (html/css/image/js) for browser to run. To serve this static content from the Go app, run the following commands in terminal:
+This compiled the Vue project and saved the result in the `dist` folder, which contains the static contents (html/css/image/js) for browser to run. In order to serve this static content from the Go app, first run the following commands in terminal:
 ```
 cd ~/src/codehouse-2021-prework
 go get github.com/gin-contrib/static
 ```
-In VS Code, edit the main.go file to add a new import:
+Next, in VS Code, edit the main.go file to add a new import:
 
-`	"github.com/gin-contrib/static"
-`
+`"github.com/gin-contrib/static" `
 
 and add a new route url ('/') before the API endpoint handlers:
   
@@ -120,8 +120,13 @@ func main() {
 
 Use the `go run .` comamnd to run the Go app, then open the browser to navigate to http://localhost:8090. You should now see the same "Welcome to Your Vue.js App" page. 
 
-Now the Go app is serving the Vue contents. We will modify the Vue scaffolding app to consume the TODO API in the next chapter.
+Now the Go app and Vue app are unified,  we will modify the Vue app to consume the TODO API in the next chapter.
 
+## Debug the Vue app
+Debugging the Vue app is very easy with the Vue.js devtools extension. To install:
+- [Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
 
+In the borwser, open the browser's developer tool, and refresh the page `http://lcaolhost:8090`. In the **Source** tab of Chrome's dev tool or the **Debugger** tab of Firefox's dev tool, navigate to *Webpack->src* folder and open App.Vue. You should be able to set a breakpoint in the script section of App.vue and debug the code. 
 
 

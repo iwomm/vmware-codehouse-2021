@@ -1,4 +1,4 @@
-# VMware CodeHouse 2021 Prework - Chapter 2
+# Chapter 2 - Create the Todo API in Go & Gin
 ## Objective
 To continue with the project created in chapter 1, we will create API for managing TODO items. The API will have endpoints for 
 - GET /api/todos - get the list of all todo items
