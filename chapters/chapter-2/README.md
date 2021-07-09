@@ -79,7 +79,7 @@ func main() {
 
 The code declares a Go slice (`var todos []TODO`) of Todo type. The main() function starts by adding the first item to this slice, and it maps the `GET /api/todo` API endpoint to the `GetTodos` method as the API endpoint handler. The handler method returns a JSON object using [the Context object's JSON() method](https://pkg.go.dev/github.com/gin-gonic/gin#Context.JSON). **Note you can use the link to navigate the Gin's help documents, and search for helps for other Gin methods**.
 
-Launch the server with the `run go .` command. From another terminal window, run the following command, which will output the result as:
+Launch the server with the `go run .` command. From another terminal window, run the following command, which will output the result as:
 ```
 curl -X GET http://localhost:8090/api/todos
 {"list":[{"Id":0,"value":"CodeHouse","due_date":"7/31/2021"}]}
