@@ -22,14 +22,25 @@ Create a new file named **todo.go** next to main.go, and type in the following c
 package main
 
 type Todo struct {
-	Id      int    `json:id`
+	ID      int    `json:id`
 	Value   string `json:"value"`
 	DueDate string `json:"due_date"`
 }
 ```
 
-In addition to the three data members in each todo item, the `json:...` tells the JSON formatter how to map each field in the go data structure to the field in the JSON object, and vice versa.
+In addition to the three data members in each todo item, the `json:...` tells the JSON formatter how to map each field in the go data structure to the field in the JSON object, and vice versa. For example, the following raw JSON input provided through API call
 
+```js
+{
+ "id": 10, "value": "some-value", "due_date": "Jun 31 2021"
+}
+```
+
+will become
+
+```go
+Todo{ID: 10, Value: "some-value", DueDate: "Jun 31 2021" }
+```
 
 ## Add API for getting all todo items
 
