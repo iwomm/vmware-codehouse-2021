@@ -144,7 +144,7 @@ The code searches for the todo item with the specified id, and the item is delet
 
 and the following new API endpoint to the main() method:
 
-`r.DELETE("/api/todos/:index", DeleteTodo)
+`r.DELETE("/api/todos/:id", DeleteTodo)
 `
 Run the new API code, and test the DELETE API with command:
 
