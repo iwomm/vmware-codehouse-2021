@@ -27,9 +27,9 @@ func PostTodo(c *gin.Context) {
 		return
 	}
 
-	item.Id = GetNextId()
+	item.ID = GetNextId()
 	todos = append(todos, item)
-	c.String(http.StatusCreated, c.FullPath()+"/"+strconv.Itoa(item.Id))
+	c.String(http.StatusCreated, c.FullPath()+"/"+strconv.Itoa(item.ID))
 }
 
 func DeleteTodo(c *gin.Context) {
@@ -37,7 +37,7 @@ func DeleteTodo(c *gin.Context) {
 
 	if id, err := strconv.Atoi(idString); err == nil {
 		for index := range todos {
-			if todos[index].Id == id {
+			if todos[index].ID == id {
 				todos = append(todos[:index], todos[index+1:]...)
 				c.Writer.WriteHeader(http.StatusNoContent)
 				return
@@ -49,7 +49,7 @@ func DeleteTodo(c *gin.Context) {
 }
 
 func main() {
-	todos = append(todos, Todo{Id: GetNextId(), Value: "CodeHouse", DueDate: "7/31/2021"})
+	todos = append(todos, Todo{ID: GetNextId(), Value: "CodeHouse", DueDate: "7/31/2021"})
 
 	r := gin.Default()
 	r.GET("/api/todos", GetTodos)
