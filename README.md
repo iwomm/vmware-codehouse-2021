@@ -1,4 +1,4 @@
-# VMware CodeHouse 2021
+# VMware CodeHouse 2021 
 
 This project will serve as guidance for attendees and mentors of VMware CodeHouse 2021.
 
