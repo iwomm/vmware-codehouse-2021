@@ -1,6 +1,6 @@
 # VMware CodeHouse 2021
 
-This project will serve as guidance for attendees and mentors of VMware CodeHouse 2021.
+This project will serve as guidance for attendees and mentors of VMware CodeHouse 2021
 
 The goal of VMware CodeHouse 2021 will be to create an application that furthers STEM eduction and/or Diversity & Inclusion.
 
